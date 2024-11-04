@@ -1,0 +1,370 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.container{
+    height: 100%;
+}
+
+.hijo{
+    padding: 5px;
+    background-color: aqua;
+    border: 2px solid;
+}
+
+/*Background*/
+.hero{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+
+}
+.backgroundVideo{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+}
+
+@media (width < 1000px){
+    .backgroundVideo{
+        width: auto;
+        height: 100%;
+    }
+}
+
+/*OverLay*/
+
+.overlay {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Superposición negra con opacidad */
+    color: white; /* Color del texto */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.overlay h1 {
+    font-size: 2.5em; /* Ajusta según lo necesites */
+    margin: 0 0 40px;
+}
+
+.overlay p {
+    font-size: 1.2em; /* Ajusta según lo necesites */
+    width: 30em;
+}
+
+/*Header*/
+
+header{
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+}
+
+header ul{
+    display: flex;
+}
+
+header li{
+    list-style: none;
+    padding: 10px 10px 0px;
+}
+
+header a{
+    color: #FFFF;
+    text-decoration: none;
+    transition: 0.5s;
+}
+
+header a:hover{
+    color: rgb(30, 143, 30);
+    background-color: beige;
+    transition: 0.5s;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+/*Section grid*/
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Istok+Web:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+    font-family: "DM Sans", sans-serif;
+}
+
+.padre{
+    display: grid;
+    justify-content: center;
+    padding: 16px 0;
+    gap: 16px;
+    grid-template-columns: repeat( auto-fill, 280px);
+    grid-template-rows: repeat(8, minmax(300, 1fr));
+    max-width: 100%;
+}
+
+.hijo{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    background-color: #67e0a3;
+}
+
+/*hijo 1*/
+
+.hijo:nth-child(1){
+    padding: 20px 0;
+    transition: 1s;
+    
+}
+
+.hijo:nth-child(1) h1{
+    text-align: center;
+    font-weight: 500;
+    color: #ffff;
+}
+
+.hijo:nth-child(1) p{
+    font-size: 16px;
+    font-weight: 200;
+    color: #ffff;
+}
+
+.hijo:nth-child(1):hover{
+    scale: 1.05;
+    transition: 1s;
+    box-shadow: 5px 10px 10px 0px rgba(0,0,0,0.75);
+
+}
+
+/*hijo 2*/
+.hijo:nth-child(2){
+    overflow: hidden;
+    transition: 1s;
+    background-color: #ffff;
+    font-size: 20px;
+    font-weight: 500;
+    font-style: normal;
+    padding: 0 10px 0;
+    margin: 10px 0;
+    height: auto;
+    
+}
+
+.hijo:nth-child(2):hover{
+    overflow: hidden;
+    scale: 1.05;
+    transition: 1s;
+    box-shadow: 5px 10px 10px 0px rgba(0,0,0,0.75);
+
+}
+
+/*hijo 3*/
+.hijo:nth-child(3){
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+    justify-content: baseline;
+    padding: 0px 20px 0px;
+    background-color: #FFD079;
+    margin: 10px 0px;
+}
+
+.hijo:nth-child(3) p{
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 20px;
+    padding: 10px 0px;
+}
+
+.hijo:nth-child(3):hover{
+    overflow: hidden;
+    scale: 1.05;
+    transition: 1s;
+    box-shadow: 5px 10px 10px 0px rgba(0,0,0,0.75);
+
+}
+/*hijo 4*/
+
+.hijo:nth-child(4){
+    background-color: #DCD1FC;
+}
+.hijo:nth-child(4) h2{
+    text-align: center;
+    padding: 10px;
+    font-size: 16px
+}
+
+.hijo:nth-child(4) p{
+    text-align: center;
+    font-size: 12px;
+    padding: 10px 0px;
+}
+
+.hijo:nth-child(4):hover{
+    overflow: hidden;
+    scale: 1.05;
+    transition: 1s;
+    box-shadow: 5px 10px 10px 0px rgba(0,0,0,0.75);
+
+}
+
+/*hijo 5*/
+
+.hijo:nth-child(5){
+    text-align: center;
+    padding: 20px;
+    color: #ffff;
+}
+
+.hijo:nth-child(5) p{
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 16px;
+    padding: 20px 0 0 0;
+}
+
+.hijo:nth-child(5):hover{
+    overflow: hidden;
+    scale: 1.05;
+    transition: 1s;
+    box-shadow: 5px 10px 10px 0px rgba(0,0,0,0.75);
+
+}
+
+/*Hijo 6*/
+
+.hijo:nth-child(6){
+    display: flex;
+    align-items: baseline;
+    background-color: #ffff;
+    padding: 10px 0;
+
+}
+
+.hijo:nth-child(6) p{
+    margin: 10px 0;
+}
+
+.hijo:nth-child(6):hover{
+    overflow: hidden;
+    scale: 1.05;
+    transition: 1s;
+    box-shadow: 5px 10px 10px 0px rgba(0,0,0,0.75);
+
+}
+
+/* Hijo 7 */
+
+.hijo:nth-child(7){
+    display: flex;
+    align-items: baseline;
+    padding: 20px;
+    background-color: #FAEEE2;
+    transition: 1s;
+}
+
+.hijo:nth-child(7) p{
+    padding: 0 0 10px 0;
+    font-weight: 600;
+}
+
+.hijo:nth-child(7) span{
+    font-style: oblique;
+    color: hsl(256, 67%, 59%);
+}
+
+.hijo:nth-child(7):hover{
+    overflow: hidden;
+    scale: 1.05;
+    transition: 1s;
+    box-shadow: 5px 10px 10px 0px rgba(0,0,0,0.75);
+
+}
+/* Hijo 8 */
+
+.hijo:nth-child(8){
+    display: flex;
+    align-items:baseline;
+    background-color: #FFD079;
+    padding: 20px;
+    transition: 1s;
+}
+
+.hijo:nth-child(8) p{
+    font-size: 24px;
+    font-weight: 600;
+    padding-bottom: 15px;
+}
+
+.hijo:nth-child(8):hover{
+    overflow: hidden;
+    scale: 1.05;
+    transition: 1s;
+    box-shadow: 5px 10px 10px 0px rgba(0,0,0,0.75);
+
+}
+
+@media(width > 1000px){
+
+    .padre{
+        display: grid;
+        width: 100%;
+        justify-content: center;
+        align-content: center;
+    }
+
+    .hijo:nth-child(1){
+        grid-column: 2/4;
+    }
+
+    .hijo:nth-child(2){
+        grid-column: 2/3;
+        grid-row: 2/3;
+    }
+
+    .hijo:nth-child(3){
+        grid-column: 3/4;
+        grid-row: 2/3;
+    }
+
+    .hijo:nth-child(4){
+        grid-column: 4/5;
+        grid-row: 1/3;
+    }
+
+    .hijo:nth-child(5){
+        display: flex;
+        flex-direction: row;
+        grid-column: 3/5;
+        grid-row: 3/4;
+    }
+
+    .hijo:nth-child(6){
+        grid-column: 2/3;
+        grid-row: 3/4;
+    }
+    
+    .hijo:nth-child(7){
+        grid-column: 1;
+        grid-row: 1/3;
+    }
+
+    .hijo:nth-child(8){
+        grid-column: 1;
+        grid-row: 3/4;
+    }
+}
