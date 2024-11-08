@@ -1,56 +1,41 @@
-*{
-    margin: 0%;
-    padding: 0%;
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
     font-family: Arial, Helvetica, sans-serif;
 }
 
-.container{
+/* Container */
+.container {
     height: 100%;
 }
 
-.hijo{
-    padding: 5px;
-    background-color: aqua;
-    border: 2px solid;
-}
-
-/*Background*/
-.hero{
+/* Background */
+.hero {
     position: relative;
     width: 100%;
     height: 100vh;
     overflow: hidden;
-
-}
-.backgroundVideo{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 100%;
-    transform: translate(-50%, -50%);
-    z-index: -1;
+    background: linear-gradient(to left, #a8e063, #0a4d26);
 }
 
-@media (width < 1000px){
-    .backgroundVideo{
+/* Media Query for smaller screens */
+@media (width < 1000px) {
+    .backgroundVideo {
         width: auto;
         height: 100%;
     }
 }
 
-/*OverLay*/
-
+/* Overlay Styles */
 .overlay {
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.5); /* Superposición negra con opacidad */
     color: white; /* Color del texto */
     display: flex;
-    flex-direction: column;
     align-items: center;
-    justify-content: center;
-    text-align: center;
+    justify-content: space-evenly;
 }
 
 .overlay h1 {
@@ -63,46 +48,101 @@
     width: 30em;
 }
 
-/*Header*/
+.overlay img {
+    filter: drop-shadow(-25px 10px 20px rgba(0, 0, 0, 0.85));
+}
 
-header{
-    background-color: rgba(0, 0, 0, 0.5);
+/* Header Styles */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 10px 40px;
+    border-bottom: 1px solid #c0c0c0;
+    position: fixed;
+    z-index: 3;
+    background-color: transparent;
+    transition: 0.4s;
+}
+
+
+header .logo {
+    margin-right: auto; /* Esto asegura que el logo se quede pegado a la izquierda */
     display: flex;
     justify-content: center;
+    align-items: flex-end;
 }
 
-header ul{
+header .logo span {
+    font-size: 30px;
+}
+
+header .logo .eco {
+    color: #a8e063;
+}
+
+header .logo .platex {
+    color: #FFFFFF;
+}
+
+header ul {
     display: flex;
+    justify-content: center;
+    margin: 0;
 }
 
-header li{
+header li {
     list-style: none;
-    padding: 10px 10px 0px;
+    padding: 10px 20px;
 }
 
-header a{
-    color: #FFFF;
+header a {
+    font-weight: bold;
+    color: #FFFFFF;
     text-decoration: none;
     transition: 0.5s;
 }
 
-header a:hover{
-    color: rgb(30, 143, 30);
-    background-color: beige;
+.izquierda h2{
+    font-size: 18px;
+    font-weight: 100;
+    width: 500px;
+}
+
+.izquierda a{
+    display: inline-block;
+    text-decoration: none;
+    color: #000000;
+    margin-top: 40px;
+    padding: 20px 30px;
+    background-color: #ffffff;
+    border-radius:  100px;
+}
+
+header a:hover {
+    color: #000000;
+    background: #FFFFFF;
     transition: 0.5s;
-    padding: 10px;
-    border-radius: 10px;
+    padding: 15px;
+    border-radius: 90px;
 }
 
-/*Section grid*/
-
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Istok+Web:ital,wght@0,400;0,700;1,400;1,700&display=swap');
-*{
-    margin: 0%;
-    padding: 0%;
-    box-sizing: border-box;
-    font-family: "DM Sans", sans-serif;
+header.sticky{
+    background-color: #FAEEE2;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombrero sutil para dar un efecto de profundidad */
 }
+
+header.sticky .platex, header.sticky ul li a{
+    color: #000000;
+}
+
+header.sticky ul li a:hover{
+    background-color: #a8e063;
+}
+
+
+/*dasdasd*/
 
 .padre{
     display: grid;
@@ -127,8 +167,6 @@ header a:hover{
 
 .hijo:nth-child(1){
     padding: 20px 0;
-    transition: 1s;
-    
 }
 
 .hijo:nth-child(1) h1{
@@ -143,14 +181,8 @@ header a:hover{
     color: #ffff;
 }
 
-.hijo:nth-child(1):hover{
-    scale: 1.05;
-    transition: 1s;
-    box-shadow: 5px 10px 10px 0px rgba(0,0,0,0.75);
-
-}
-
 /*hijo 2*/
+
 .hijo:nth-child(2){
     overflow: hidden;
     transition: 1s;
@@ -161,18 +193,10 @@ header a:hover{
     padding: 0 10px 0;
     margin: 10px 0;
     height: auto;
-    
-}
-
-.hijo:nth-child(2):hover{
-    overflow: hidden;
-    scale: 1.05;
-    transition: 1s;
-    box-shadow: 5px 10px 10px 0px rgba(0,0,0,0.75);
-
 }
 
 /*hijo 3*/
+
 .hijo:nth-child(3){
     display: flex;
     flex-direction: column;
@@ -190,36 +214,22 @@ header a:hover{
     padding: 10px 0px;
 }
 
-.hijo:nth-child(3):hover{
-    overflow: hidden;
-    scale: 1.05;
-    transition: 1s;
-    box-shadow: 5px 10px 10px 0px rgba(0,0,0,0.75);
-
-}
 /*hijo 4*/
 
 .hijo:nth-child(4){
     background-color: #DCD1FC;
 }
+
 .hijo:nth-child(4) h2{
     text-align: center;
     padding: 10px;
-    font-size: 16px
+    font-size: 16px;
 }
 
 .hijo:nth-child(4) p{
     text-align: center;
     font-size: 12px;
     padding: 10px 0px;
-}
-
-.hijo:nth-child(4):hover{
-    overflow: hidden;
-    scale: 1.05;
-    transition: 1s;
-    box-shadow: 5px 10px 10px 0px rgba(0,0,0,0.75);
-
 }
 
 /*hijo 5*/
@@ -237,14 +247,6 @@ header a:hover{
     padding: 20px 0 0 0;
 }
 
-.hijo:nth-child(5):hover{
-    overflow: hidden;
-    scale: 1.05;
-    transition: 1s;
-    box-shadow: 5px 10px 10px 0px rgba(0,0,0,0.75);
-
-}
-
 /*Hijo 6*/
 
 .hijo:nth-child(6){
@@ -252,19 +254,10 @@ header a:hover{
     align-items: baseline;
     background-color: #ffff;
     padding: 10px 0;
-
 }
 
 .hijo:nth-child(6) p{
     margin: 10px 0;
-}
-
-.hijo:nth-child(6):hover{
-    overflow: hidden;
-    scale: 1.05;
-    transition: 1s;
-    box-shadow: 5px 10px 10px 0px rgba(0,0,0,0.75);
-
 }
 
 /* Hijo 7 */
@@ -287,13 +280,6 @@ header a:hover{
     color: hsl(256, 67%, 59%);
 }
 
-.hijo:nth-child(7):hover{
-    overflow: hidden;
-    scale: 1.05;
-    transition: 1s;
-    box-shadow: 5px 10px 10px 0px rgba(0,0,0,0.75);
-
-}
 /* Hijo 8 */
 
 .hijo:nth-child(8){
@@ -308,14 +294,6 @@ header a:hover{
     font-size: 24px;
     font-weight: 600;
     padding-bottom: 15px;
-}
-
-.hijo:nth-child(8):hover{
-    overflow: hidden;
-    scale: 1.05;
-    transition: 1s;
-    box-shadow: 5px 10px 10px 0px rgba(0,0,0,0.75);
-
 }
 
 @media(width > 1000px){
@@ -357,7 +335,7 @@ header a:hover{
         grid-column: 2/3;
         grid-row: 3/4;
     }
-    
+
     .hijo:nth-child(7){
         grid-column: 1;
         grid-row: 1/3;
